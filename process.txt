@@ -24,3 +24,27 @@ Run the Pipeline:
 
 On your new Jenkins job's page, click "Build Now" (or wait for your trigger to activate).
 Watch the "Console Output" of the build. You should see messages like:
+Pipeline] stage
+[Pipeline] { (Checkout Code)
+... Git checkout messages ...
+[Pipeline] echo
+Code checked out successfully.
+[Pipeline] }
+[Pipeline] stage
+[Pipeline] { (Run Python Script)
+[Pipeline] script
+[Pipeline] echo
+Executing hello_world.py...
+[Pipeline] sh
++ python hello_world.py
+Hello, World from Python script running in Jenkins!
+[Pipeline] echo
+Python script finished (no arguments).
+[Pipeline] echo
+Executing hello_world.py with an argument...
+[Pipeline] sh
++ python hello_world.py JenkinsUser
+Hello, JenkinsUser from Python script running in Jenkins!
+[Pipeline] echo
+Python script finished (with argument).
+[Pipeline] }
