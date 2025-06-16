@@ -1,0 +1,26 @@
+Save the Files:
+
+Save the Python code as hello_world.py.
+Save the Jenkins Pipeline code as Jenkinsfile.
+Place both files in the root directory of your Git repository.
+Push to Git: Commit both hello_world.py and Jenkinsfile to your Git repository and push them to your remote (e.g., GitHub, GitLab).
+
+Create a Jenkins Job:
+
+Log in to your Jenkins dashboard.
+Click "New Item" (or "New Job").
+Enter an item name (e.g., MyPythonPipeline), select "Pipeline," and click "OK."
+In the job configuration page:
+Under the "General" section, provide an optional description.
+Under the "Build Triggers" section, you can choose how to start the build (e.g., "Poll SCM" to check for Git changes, or "GitHub hook trigger for GITScm polling" for webhooks).
+Scroll down to the "Pipeline" section.
+For "Definition," choose "Pipeline script from SCM."
+For "SCM," select "Git."
+For "Repository URL," paste the URL of your Git repository (e.g., https://github.com/your-username/your-repo.git).
+For "Credentials," select appropriate credentials if your repo is private.
+For "Script Path," ensure it's set to Jenkinsfile (this is the default).
+Click "Save."
+Run the Pipeline:
+
+On your new Jenkins job's page, click "Build Now" (or wait for your trigger to activate).
+Watch the "Console Output" of the build. You should see messages like:
